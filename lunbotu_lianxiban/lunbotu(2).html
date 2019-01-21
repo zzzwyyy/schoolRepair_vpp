@@ -51,18 +51,45 @@
         	color:white;
         	cursor: pointer;
         }
+        /*给和图片对应的span设置一个on类*/
+        .container .buttons span .on{
+        	background-color: red;
+        }
+        /*加上左右切换的箭头*/
+        .container .arrow{
+        	position: absolute;
+        	top: 35%;
+        	color: green;
+        	padding: 0px 14px;
+        	border-radius: 50%;
+        	font-size: 50px;
+        	z-index: 2;
+        	display: none;
+        }
+        .container .arrow_left{
+        	left: 10px;
+        }
+        .container .arrow_right{
+        	right: 10px;
+        }
+        .container:hover .arrow{
+        	display: block;
+        }
+        .container .arrow:hover {
+        	background-color: rgba(0,0,0,0.2);
+        }
 	</style>
 </head>
 <body>
     <div class="container">
-    	<div class="wrap">
-    		<img src="5.jpg">
-    		<img src="1.jpg">
-    		<img src="2.jpg">
-    		<img src="3.jpg">
-    		<img src="4.jpg">
-    		<img src="5.jpg">
-    		<img src="1.jpg">
+    	<div class="wrap" style="left:-600px;">
+    		<img src="5.jpg" alt="">
+    		<img src="1.jpg" alt="">
+    		<img src="2.jpg" alt="">
+    		<img src="3.jpg" alt="">
+    		<img src="4.jpg" alt="">
+    		<img src="5.jpg" alt="">
+    		<img src="1.jpg" alt="">
     	</div>
     	<div class="buttons">
     		<span>1</span>
@@ -72,8 +99,8 @@
     		<span>5</span>
     	</div>
     	<!--两个控制前进与后退的按钮-->
-    	<a href="javascript:;" >&lt;</a>
-    	<a href="javascript:;" >&gt;</a>
+    	<a href="javascript:;" class="arrow arrow_left" >&lt;</a>
+    	<a href="javascript:;" class="arrow arrow_right" >&gt;</a>
     </div>
 </body>
 </html>
