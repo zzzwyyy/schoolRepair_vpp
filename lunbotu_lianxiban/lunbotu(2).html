@@ -81,7 +81,7 @@
         	background-color: rgba(0,0,0,0.2);
         }
 	</style>
-	<script type="text/javascript" src="js/lunbotu.js"></script>
+	<!-- <script type="text/javascript" src="js/lunbotu.js"></script> -->
 </head>
 <body>
     <div class="container">
@@ -105,5 +105,26 @@
     	<a href="javascript:;" class="arrow arrow_left" >&lt;</a>
     	<a href="javascript:;" class="arrow arrow_right" >&gt;</a>
     </div>
+    <script>
+    	/*设置左右箭头的控制*/
+  var wrap = document.querySelector(".wrap");
+  var next = document.querySelector(".arrow_right");
+  var prev = document.querySelector("arrow_left");
+  function next_pic (){
+  	var newLeft = parseInt(wrap.style.left)-600;
+  	wrap.style.left = newLeft + "px";
+  }
+  function prev_pic (){
+  	var newLeft = parseInt(wrap.style.left)+600;
+  	wrap.style.left = newLeft + "px"; 
+  }
+  next.onclick = function (){
+  	next_pic()
+  }
+  prev.onclick = function(){
+  	prev_pic()
+  }
+
+    </script>
 </body>
 </html>
