@@ -106,17 +106,38 @@
     	<a href="javascript:;" class="arrow arrow_right" >&gt;</a>
     </div>
     <script>
-    	/*设置左右箭头的控制*/
+    	/*设置左右箭头的控制*/  /*实现手动播放*/
   var wrap = document.querySelector(".wrap");
   var next = document.querySelector(".arrow_right");
-  var prev = document.querySelector("arrow_left");
+  var prev = document.querySelector(".arrow_left");
   function next_pic (){
-  	var newLeft = parseInt(wrap.style.left)-600;
+  	var newLeft ;
+  	if(wrap.style.left === "-3600px"){
+  		newLeft = -1200;
+  	}
+  	else{
+        newLeft = parseInt(wrap.style.left)-600;
+  	}
   	wrap.style.left = newLeft + "px";
+  	index++;
+    if(index > 4){
+      index = 0;
+    }
   }
   function prev_pic (){
-  	var newLeft = parseInt(wrap.style.left)+600;
+  	var newLeft ;
+    if(wrap.style.left === "0px"){
+    	newLeft = -2400;
+    }
+    else{
+  	    newLeft = parseInt(wrap.style.left)+600;
+    }
   	wrap.style.left = newLeft + "px"; 
+  	index--;
+    if(index < 0){
+       index = 4;
+    }
+    showCurrentDot();
   }
   next.onclick = function (){
   	next_pic()
@@ -124,7 +145,31 @@
   prev.onclick = function(){
   	prev_pic()
   }
-
-    </script>
+    /*实现自动播放*/
+    var timer = null;
+    function autoPlay (){
+    	timer = setInterval(function() {
+    		next_pic();
+    	},1000);
+    }
+    autoPlay();
+    /*轮播图停止*/
+    var container = document.querySelector(".container");
+    container.onmouseenter = function(){
+    	clearInterval(timer);
+    }
+    container.onmouseleave = function() {
+    	autoPlay();
+    }
+    /*设置小圆点*/
+     var index = 0;
+     var dots = document.getElementsByTagName("span");
+     function showCurrentDot () {
+     	for(var i = 0, len = dots.length; i < len;i++){
+     		dots[i].className = "";
+     	}
+     	dots[index].className = "on";
+     }
+    </script>	
 </body>
 </html>
