@@ -16,3 +16,10 @@
     		<span>4</span>
     		<span>5</span>
 <!--动态部分-->
+1.实现手动播放 
+  判断是否循环（即图片所在位置）
+  左+600px 右-600px
+2.自动播放 setInterval（）函数
+3.轮播图停止 鼠标悬停事件（onmouseenter onmouseleave）
+4.设置小圆点 循环
+5.点击圆点跳转到对应图片 循环找对应的index值
