@@ -1,0 +1,31 @@
+v-for 循环
+v-model 双向绑定
+v-on 绑定事件
+
+逻辑代码：
+<body>
+	<div id="app">
+       <input type="text" name="text" v-model="inputVaule"/>
+       <button v-on:click="handleBtnClick">提交</button>
+       <ul>
+    	  <li v-for="item in list">{{item}}</li>
+       </ul>
+    </div>
+    <script>
+    	var app = new Vue({
+    		el: '#app',
+    		data: {
+                list:[],
+                inputVaule: ''
+    		},
+    		methods: {
+    			handleBtnClick:function(){
+                   this.list.push(this.inputVaule)
+                   this.inputVaule = '' /*输入框清空*/
+
+    			}
+    		}
+    		
+    	})
+    </script>
+</body>
