@@ -22,14 +22,14 @@
             props:['content'],
             template: "<li>{{content}}</li>"//差值表达式
     })*/
-      var todo-item = {
+      var todoItem = {
         props: ['content'],
         template: "<li>{{content}}</li>"
       }
     	var app = new Vue({
     		el: '#app',
         components: {
-        todo-item:todo-item
+           'todo-item':todoItem
         },
     		data: {
                 list:[],
