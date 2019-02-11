@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>条件与循环</title>
+	<script src="./vue.js"></script>
+</head>
+<body>
+     <div id="app">
+     	<p v-if="seen">现在你能看到我</p>
+     </div>
+    <script>
+    	var app = new Vue({
+    		el: '#app',
+            data: {
+            	seen: true
+            }
+    	})
+    </script> 
+</body>
+</html>

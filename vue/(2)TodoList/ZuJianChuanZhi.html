@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>组件传值</title>
+	<meta charset="utf-8">
+	<script src='./vue.js'></script>
+</head>
+<body>
+	<div id="root">
+     <div>
+       <input type="text" name="text" v-model="inputVaule"/>
+       <button @click="handleBtnClick">提交</button>
+     </div>
+       <ul>
+        <todo-item v-bind:content='item' 
+                   v-bind:index="index"
+                   v-for="(item,index) in list"
+                   @delete="handleItemDelete">
+        </todo-item>
+       </ul>
+    </div>
+    <script>
+      var TodoItem = {
+        props: ['content','index'],
+        template: "<li @click='handleItemClick'>{{content}}</li>",
+        methods: {
+          handleItemClick: function() {
+            this.$emit("delete",this.index);
+          }
+        }
+      }
+    	var app = new Vue({
+    		el: '#root',
+        components: {
+           'TodoItem':TodoItem
+        },
+    		data: {
+                list:[],
+                inputVaule: ''
+    		},
+    		methods: {
+    			handleBtnClick:function() {
+                   this.list.push(this.inputVaule)
+                   this.inputVaule = '' 
+          },
+          handleItemDelete: function(index) {
+                   this.list.splice(index,1)
+          }       
+    		}
+    		
+    	})
+    </script>
+</body>
+</html>
