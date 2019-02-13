@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计算属性、方法和监听器</title>
+	<meta charset="utf-8">
+	<script src="../(2)TodoList/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+    	
+    	{{fullName}}  <!--如果是计算属性 此处应该是{{fullName}}--><!--如果是计算属性 此处应该是{{fullName()}}-->
+    	{{age}}
+    </div>
+    <div id="app2">
+    	{{fullName}}  
+    	{{age}}
+    </div>
+    <script>
+    	var vm = new Vue({
+    		el: "#app",
+    		data: {
+    			
+    			firstName:"wang",
+    			lastName:"yingying",
+    			age: 22
+    		},
+            //计算属性 存在缓存机制 只有相应变量改变才会再进行重新缓存 (与methods相比，computed更好)
+    		computed: {
+               fullName: function() {
+               	  console.log("计算了一次");
+                  return this.firstName  + " " + this.lastName;
+               }
+    		}
+
+    		//方法 只要页面被重新渲染 method就被调用一次 不存在缓存机制
+    		/*methods: {
+    			 fullName: function() {
+               	  console.log("计算了一次");
+                  return this.firstName  + " " + this.lastName;
+               }
+    		}*/
+
+    		//监听器
+
+    	})
+       var vm2 = new Vue({
+    		el: "#app2",
+    		data: {
+    			
+    			firstName:"wang",
+    			lastName:"yingying",
+    			fullName:"wang yingying",
+    			age: 22
+    		},
+    		watch:{
+    			firstName:function() {
+                    console.log("计算了一次")
+                    this.fullName = this.firstName + " " + this.lastName;
+    			},
+    			lastName:function() {
+                    console.log("计算了一次")
+                    this.fullName = this.firstName + " " + this.lastName;
+    			},
+    		}
+        })
+    </script>
+</body>
+</html>

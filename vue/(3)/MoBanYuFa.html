@@ -7,8 +7,9 @@
 </head>
 <body>
    <div id="app">
-   	  <div v-text="name"></div>
-   	  <div v-html="name"></div>
+   	  <div>{{name + ' Lee'}}</div>
+   	  <div v-text="name +' Lee'"></div>
+   	  <div v-html="name +' Lee'"></div> <!--v-html中加入的字符串会带有"name"相应属性-->
    </div>
    <script>
    	  var vm = new Vue({
