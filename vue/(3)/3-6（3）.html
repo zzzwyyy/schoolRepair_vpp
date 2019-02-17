@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue的样式绑定-内联对象绑定</title>
+	<meta charset="utf-8">
+	<script src="../(2)todoList/vue.js"></script>
+	
+</head>
+<body>
+    <div id="app">
+    	<div :style="styleObj" @click="handleDivClick">
+             hello world
+        </div>
+    </div>
+    <script>
+    	var vm = new Vue ({
+    		el: "#app",
+            data:{
+                styleObj:{
+                    color: "black"
+                }
+            },
+    		methods:{
+                handleDivClick: function() {
+                    this.styleObj.color = this.styleObj.color === "black" ?
+                    "red":"black";
+                }                
+            },
+    		
+    	})
+    </script>
+</body>
+</html>
