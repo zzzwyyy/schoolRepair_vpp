@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue的列表渲染（数组）</title>
+	<meta charset="utf-8">
+	<script src="../(2)todoList/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+   	   <div v-for="(item,key,index) of userInfo"
+            :key>
+            {{item}}----{{key}}-----{{index}}
+       </div>
+   </div>
+   <script>
+   	 var vm = new Vue({
+   	 	el:"#app",
+        data:{
+          userInfo:{
+              name:"wyy",
+              age:"22",
+              gender:"gril",
+              city:"quanzhou"
+          }
+        }
+
+   	 })
+   </script>
+</body>
+</html>
