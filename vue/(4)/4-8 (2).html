@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>v-once指令</title>
+	<meta charset="utf-8">
+	<script src="../(2)todoList/vue.js"></script>
+</head>
+<body>
+
+    <div id="root">
+    	<child-one v-if="type === 'child-one' "></child-one>     （
+    	<child-two v-if="type === 'child-two' "></child-two>
+    	<button @click='handleClick'>change</button>
+    </div>
+
+    <script>
+
+      /*v-once指令将组件放入内存，使用时从内存区取出
+      反之，将销毁前一个组件再创建一个新组件，如此循环，性能消耗大*/
+
+    	Vue.component('child-one',{
+    		template:'<div v-once>child-one</div>'      
+    	})
+
+    	Vue.component('child-two',{
+    		template:'<div v-once>child-two</div>'
+    	})
+    	
+       var vm = new Vue({
+       	   el:'#root',
+       	   data:{
+       	   	  type:'child-one'
+       	   },
+       	   methods:{
+       	   	  handleClick: function() {
+       	   	  	this.type = this.type === 'child-one' ?
+       	   	  	"child-two":"child-one"
+       	   	  }
+       	   }
+       })
+
+    </script>
+
+</body>
+</html>
