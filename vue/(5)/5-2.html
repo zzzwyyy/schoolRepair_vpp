@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue中使用Animate.css库</title>
+	<meta charset="utf-8">
+	<script src="../(2)todoList/vue.js"></script>
+	<style>
+
+		@keyframes bounce-in {
+            0% {
+                transform: scale(0)
+            }
+            50% {
+                transform: scale(1.5)
+            }
+            100% {
+                transform: scale(1)
+            }
+        } 
+
+		.fade-enter {                       
+			
+		}
+		
+		.fade-enter-active {
+			
+	</style>
+</head>
+<body>
+    
+    <div id='root'>
+        <transition name="fade" >
+    	     <div v-if="show">hello wrold</div>
+    	</transition>
+     	<button @click="handleClick">切换</button>
+    </div>
+    
+    <script>
+    	var vm = new Vue({
+    		el:'#root',
+    		data:{
+    			show:true
+    		},
+    		methods:{
+    			handleClick: function() {
+    				this.show = !this.show
+    			}
+    		},
+    	})
+    </script>
+
+
+</body>
+</html>
