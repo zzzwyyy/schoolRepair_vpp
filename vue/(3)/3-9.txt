@@ -1,2 +1,2 @@
-数组更新检测
+数组更新检测：
 http://doc.vue-js.com/v2/guide/list.html

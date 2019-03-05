@@ -18,12 +18,12 @@
             }
         } 
 
-		.fade-enter-active {  
+		.active {  
             transform-origin: left center ;                     
 			animation: bounce-in 1s;
 		}
 		
-		.fade-leave-active {
+		.leave {
             transform-origin: left center ;
 			animation: bounce-in 1s reverse;  /*reverse 反向执行*/
 	</style>
@@ -31,8 +31,11 @@
 <body>
     
     <div id='root'>
-        <transition name="fade" >
-    	     <div v-if="show">hello wrold</div>
+        <transition 
+        name='fade'
+        enter-enter-class='active'
+        leave-enter-class='leave'>
+    	     <div v-if="show">hello wrod</div>
     	</transition>
      	<button @click="handleClick">切换</button>
     </div>
