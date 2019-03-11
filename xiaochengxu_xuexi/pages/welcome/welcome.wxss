@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:13344rpx;
+  background-color: #b3d4db;
+}
+
+.portrait {
+  width:250rpx;
+  height:250rpx;
+  border-radius:125rpx;
+  margin-top: 160rpx;
+}
+
+.hello {
+  margin-top: 100rpx;
+  font-size:32rpx;
+  font-weight:bold; 
+}
+
+.container-begin {
+  margin-top:200rpx;
+  border:1px solid black;
+  width:300rpx;
+  height:60rpx;
+  border-radius:10rpx;
+  text-align: center;
+}

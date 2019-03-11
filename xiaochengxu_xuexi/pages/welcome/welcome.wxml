@@ -1,7 +1,7 @@
-<view>
-  <image src="/images/1.png"></image>
-  <text>Hello</text>
-  <view>
+<view class="container">
+  <image class="portrait" src="/images/1.png"></image>
+  <text class="hello">Hello</text>
+  <view class="container-begin">
     <text>开启小程序之旅</text>
   </view>
 </view>
