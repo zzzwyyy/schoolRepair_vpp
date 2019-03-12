@@ -1,0 +1,17 @@
+<view>
+  <swiper indicator-dots="true" 
+          indicator-active-color="red"
+          autoplay="true"
+          interval="5000"
+  >
+    <swiper-item>
+       <image src="/images/swiper1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+       <image src="/images/swiper2.jpg"></image>
+    </swiper-item>
+        <swiper-item>
+       <image src="/images/swiper3.jpg" ></image>
+    </swiper-item>  
+  </swiper>
+</view>

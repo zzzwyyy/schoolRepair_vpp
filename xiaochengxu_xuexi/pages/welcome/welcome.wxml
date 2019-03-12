@@ -1,5 +1,5 @@
 <view class="container">
-  <image class="portrait" src="/images/1.png"></image>
+  <image class="portrait" src="/images/welcome.png"></image>
   <text class="hello">Hello</text>
   <view class="container-begin">
     <text>开启小程序之旅</text>
