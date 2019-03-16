@@ -1,5 +1,5 @@
 <view class='user-box'> 
- <view class='user-content'>请输入验证码{{inputNum}}</view>
+ <view class='user-content'>请输入验证码</view>
  <view>
    <input class='user-input' 
           type='number' 
