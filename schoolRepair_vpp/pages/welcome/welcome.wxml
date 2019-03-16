@@ -1,0 +1,4 @@
+<view class="welcome">
+   <view class="user">用户端</view>
+   <view class="repairman" bindtap="onTap">维修端</view>
+</view>

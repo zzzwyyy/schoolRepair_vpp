@@ -1,0 +1,15 @@
+.user {
+  display:flex;
+  flex-direction: column;
+  margin-top: 100rpx;
+  width:100%;
+  background-color: pink;
+}
+
+.repairman {
+  display:flex;
+  flex-direction: column;
+  margin-top: 100rpx;
+  width:100%;
+  background-color: yellow;
+}

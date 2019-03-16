@@ -1,0 +1,14 @@
+<view class='user-box'> 
+ <view class='user-content'>请输入验证码{{inputNum}}</view>
+ <view>
+   <input class='user-input' 
+          type='number' 
+          maxlength='8'
+          bindinput="inputNumber"  
+   />
+  <button class='user-botton' 
+          type='primary'
+          bindtap="handleButton"
+  >提交</button>
+ </view>
+</view>

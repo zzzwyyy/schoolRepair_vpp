@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/validate/validate",
+    "pages/welcome/welcome"
+  ],
+
+  "window":{
+    "navigationBarTitleText": "校园修一修"
+  }
+}

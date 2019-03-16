@@ -1,0 +1,26 @@
+.user-box {
+  display: flex;
+  flex-direction: column;
+  border:1px solid #808080;
+  border-radius:7rpx;
+  width:90%;
+  height:400rpx;
+  align-items:center;
+  margin:100rpx 5% 0 5%;
+}
+
+.user-content {
+  margin-top:30rpx;
+}
+
+.user-input{
+  border: 1px solid #ccc;
+  width:500rpx;
+  height:70rpx; 
+  margin-top:40rpx;
+}
+
+.user-botton {
+   margin-top:30rpx;
+   width:400rpx;
+}
