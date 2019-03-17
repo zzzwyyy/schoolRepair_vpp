@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/messages/message",
     "pages/validate/validate",
     "pages/welcome/welcome"
   ],

@@ -1,0 +1,16 @@
+.section {
+  display:flex;
+  flex-direction: row;
+  margin:30rpx;
+}
+
+picker {
+   border: 1px solid #ccc;
+   height:50rpx; 
+   width: 100rpx;
+   border-radius:5rpx;
+}
+
+button {
+  margin:10rpx;
+}

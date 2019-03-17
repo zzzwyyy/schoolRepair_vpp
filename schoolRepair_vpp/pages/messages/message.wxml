@@ -1,0 +1,36 @@
+<form>
+  <view class="section" >
+    <text>用户名：</text>
+    <input type="text"
+           placeholder="请输入姓名"
+    />
+  </view>
+  <view class="section">
+    <text>性别：</text>
+    <picker mode="selector"
+            range="{{xingbie}}"
+            value="{{index}}"
+            bindchange="changeSex"
+    >
+       {{xingbie[index]}}
+    </picker>
+  </view>
+  <view class="section">
+    <text>账号：</text>
+    <input type="number"
+           placeholder="请输入工号"
+    />
+  </view>
+  <view class="section">
+    <text>手机号：</text>
+    <input type="number"
+           maxlength='11'
+           placeholder="请输入手机号"
+    />
+  </view>
+  <view class="section">
+    <text>管理范围：</text>
+    <input/>
+  </view>
+  <button>注册</button>
+</form>
