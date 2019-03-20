@@ -1,15 +1,20 @@
 <form bindsubmit="formSubmit" >
+
+<block wx:if="{{show}}">
+    <text  class="warn">“请补全信息”</text>
+  </block>
+
   <view class="section" >
-    <text>用户名：</text>
+    <text >用户名：</text>
     <input type="text"
            placeholder="请输入姓名"
            name='managerName'
     />
   </view>
+
   <view class="section">
      <view>性别：</view>
-     <radio-group bindchange="sexChange" 
-                  name='sex'>
+     <radio-group name='sex'>
         <label> 
            <radio value="男" checked/>男
         </label>
@@ -18,6 +23,7 @@
         </label>
      </radio-group>
   </view>
+
   <view class="section">
     <text>账号：</text>
     <input type="number"
@@ -25,6 +31,7 @@
            name="managerId"
     />
   </view>
+
   <view class="section">
     <text>手机号：</text>
     <input type="number"
@@ -33,9 +40,18 @@
            name='managerPhone'
     />
   </view>
-  <view class="section">
-    <text>管理范围：</text>
-    <input/>
+
+  <view>
+    <text  class="section">管理范围：</text>
+    <checkbox-group bindchange="checkboxChange">
+       <label wx:for="{{items}}"
+              value="{{item.name}}"
+              class="label-box">
+          <checkbox/>{{item.value}}
+       </label>
+    </checkbox-group>
   </view>
+
   <button formType="submit">注册</button>
+
 </form>

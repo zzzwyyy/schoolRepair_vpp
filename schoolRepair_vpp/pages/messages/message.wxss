@@ -14,3 +14,20 @@ picker {
 button {
   margin:10rpx;
 }
+
+.warn {
+  margin-top:5rpx;
+  padding:10rpx;
+  display: flex;
+  flex-direction:column;
+  width:100%;
+  background-color:#ffBc31;
+  align-items:center;
+  border:1rpx solid red;
+}
+
+.label-box {
+  display:flex;
+  flex-direction:row;
+  margin-left:250rpx;
+  }
