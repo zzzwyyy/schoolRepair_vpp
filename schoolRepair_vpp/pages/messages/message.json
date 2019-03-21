@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "Dialog":"component/Dialog/dialog"
+  },
   "navigationBarTitleText": "个人注册"
 }

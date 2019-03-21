@@ -1,1 +1,21 @@
-<text>1</text>
+<view>
+
+  <!--头部选项栏-->
+  <view>
+     <block wx:for="{{items}}">
+       {{item}}
+     </block>
+  </view>
+  
+  <!--楼层选择栏-->
+  <view>
+     <view wx:for="{{floors}}"
+            wx:for-item="floor"
+     >
+       <!--楼层信息-->
+       {{floor}}
+     </view>
+
+  </view>
+
+</view>
