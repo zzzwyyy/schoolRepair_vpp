@@ -1,21 +1,13 @@
-<view>
-
-  <!--头部选项栏-->
-  <view>
-     <block wx:for="{{items}}">
-       {{item}}
-     </block>
-  </view>
-  
-  <!--楼层选择栏-->
-  <view>
-     <view wx:for="{{floors}}"
-            wx:for-item="floor"
-     >
-       <!--楼层信息-->
-       {{floor}}
-     </view>
-
-  </view>
-
+<view class="all">
+    <view class="head">
+       <view class="{{selected1? 'red':'white'}}" bindtap="selected1">宿舍</view>
+       <view class="{{selected2? 'red':'white'}}" bindtap="selected2">教学楼</view>
+       <view class="{{selected3? 'red':'white'}}" bindtap="selected3">图书馆</view>
+    </view>
+    
+    <view class='content'>
+       <view class="{{selected1? 'show':'hidden'}}">这是宿舍</view>
+       <view class="{{selected2? 'show':'hidden'}}">这是教学楼</view>
+       <view class="{{selected3? 'show':'hidden'}}">这是图书馆</view>
+    </view>
 </view>

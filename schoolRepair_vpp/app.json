@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/messages/message",
     "pages/shouye/shouye",
+    "pages/messages/message",
+   
     "pages/validate/validate",
-    "pages/welcome/welcome",
-    "components/Dialog/dialog.js"
+    "pages/welcome/welcome" 
   ],
   "window": {
     "navigationBarTitleText": "校园修一修"
