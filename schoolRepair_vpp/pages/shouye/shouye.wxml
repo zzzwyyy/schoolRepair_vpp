@@ -1,13 +1,17 @@
-<view class="all">
-    <view class="head">
-       <view class="{{selected1? 'red':'white'}}" bindtap="selected1">宿舍</view>
-       <view class="{{selected2? 'red':'white'}}" bindtap="selected2">教学楼</view>
-       <view class="{{selected3? 'red':'white'}}" bindtap="selected3">图书馆</view>
-    </view>
+<view>
     
-    <view class='content'>
-       <view class="{{selected1? 'show':'hidden'}}">这是宿舍</view>
-       <view class="{{selected2? 'show':'hidden'}}">这是教学楼</view>
-       <view class="{{selected3? 'show':'hidden'}}">这是图书馆</view>
+      <view wx:for="{{items}}" wx:key="index" class="tabNav">
+         <view class="{{currentTabIndex == index? 'selected':'noSelected'}}" 
+               bindtap="currentTap"
+               data-idx="{{index}}"
+         >
+            {{item}} {{index}}
+          </view>
+      </view>
+    
+    <view>
+       <view hidden="{{currentTabIndex != 0}}">这是宿舍</view>
+       <view hidden="{{currentTabIndex != 1}}">这是教学楼</view>
+       <view hidden="{{currentTabIndex != 2}}">这是图书馆</view>
     </view>
 </view>

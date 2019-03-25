@@ -1,0 +1,48 @@
+wxml:
+<view class="all">
+    <view class="head">
+       <view class="{{selected1? 'red':'white'}}" bindtap="selected1">宿舍</view>
+       <view class="{{selected2? 'red':'white'}}" bindtap="selected2">教学楼</view>
+       <view class="{{selected3? 'red':'white'}}" bindtap="selected3">图书馆</view>
+    </view>
+    
+    <view class='content'>
+       <view class="{{selected1? 'show':'hidden'}}">这是宿舍</view>
+       <view class="{{selected2? 'show':'hidden'}}">这是教学楼</view>
+       <view class="{{selected3? 'show':'hidden'}}">这是图书馆</view>
+    </view>
+</view>
+
+js:
+Page({
+  data: {
+    selected1: true,
+    selected2: false,
+    selected3: false,
+  },
+
+  selected1:function(e){
+    this.setData({
+      selected1: true,
+      selected2: false,
+      selected3: false,
+    })
+  },
+
+  selected2: function (e) {
+    this.setData({
+      selected1: false,
+      selected2: true,
+      selected3: false,
+    })
+  },
+
+  selected3: function (e) {
+    this.setData({
+      selected1: false,
+      selected2: false,
+      selected3: true,
+    })
+  }
+
+})

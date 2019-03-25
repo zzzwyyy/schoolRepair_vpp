@@ -1,35 +1,25 @@
-.head {
+.selected {
+  color:red;
+  font-weight:bold;
+  text-align:center;
+  line-height:50rpx;
+  flex:1;
+  border-bottom:2px solid gainsboro;
+}
+
+.noSelected {
+  color:black;
+  font-weight:bold;
+  text-align:center;
+  line-height:50rpx;
+  flex:1;
+  border-bottom:2px solid gainsboro;
+}
+
+.tabNav {
+  width:100%;
+  height:50rpx;
+  background-color: pink;
   display:flex;
   flex-direction:row;
-  width:100%;
-  height:100rpx;
-  background-color: pink;
-}
-
-.red {
-  line-height:100rpx;
-  text-align:center;
-  color:#fc5558;
-  flex:1;
-  border-right:1px solid gainsboro;
-  font-weight:bold;
-  font-size:28rpx;
-}
-
-.white {
-  line-height:100rpx;
-  text-align:center;
-  color:#000;
-  flex:1;
-  border-right:1px solid gainsboro;
-  font-weight:bold;
-  font-size:28rpx;
-}
-
-.show {
-  display:flex;
-}
-
-.hidden {
-  display:none;
 }
