@@ -1,17 +1,19 @@
 <view>
-    
-      <view wx:for="{{items}}" wx:key="index" class="tabNav">
+    <view class="tabNav">
+      <view wx:for="{{items}}" wx:key="index" class='tabselected'>
          <view class="{{currentTabIndex == index? 'selected':'noSelected'}}" 
                bindtap="currentTap"
-               data-idx="{{index}}"
-         >
-            {{item}} {{index}}
-          </view>
+               data-idx="{{index}}">
+             {{item}}
+         </view>
       </view>
-    
+    </view>
+
     <view>
-       <view hidden="{{currentTabIndex != 0}}">这是宿舍</view>
+       <!--宿舍-->
+       <view hidden="{{currentTabIndex != 0}}">这是宿舍 </view>
        <view hidden="{{currentTabIndex != 1}}">这是教学楼</view>
        <view hidden="{{currentTabIndex != 2}}">这是图书馆</view>
+       <view hidden="{{currentTabIndex != 3}}">这是教学楼</view>
     </view>
 </view>
