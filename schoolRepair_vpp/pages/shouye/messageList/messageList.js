@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    items:[
+      { "name": "长思一号", "id": "one" },
+      { "name": "长思二号", "id": "tow" },
+      { "name": "长思三号", "id": "three" },
+      { "name": "长思四号", "id": "four" },
+      { "name": "长思五号", "id": "five" },
+    ],
+    currentTabIndex:0
   },
 
   /**
@@ -62,5 +69,14 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  currrenttap:function(e) {
+    if(this.data.currentTabIndex == e.currentTarget.dataset.idx)
+      {
+        return;
+      }
+    this.setData({
+      currentTabIndex: e.currentTarget.dataset.idx
+    })
   }
 })

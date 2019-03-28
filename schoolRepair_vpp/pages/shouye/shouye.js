@@ -71,8 +71,8 @@ Page({
   },
   /*点击管理地点的选项卡事件*/
   currentTap:function(e) {
-     console.log(e.currentTarget.dataset.idx)
-     if(this.data.currentTabINdex == e.currentTarget.dataset.idx) {
+    console.log(e)
+     if(this.data.currentTabIndex == e.currentTarget.dataset.idx) {
        return;
      }
      this.setData({

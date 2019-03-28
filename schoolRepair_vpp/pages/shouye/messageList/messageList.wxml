@@ -1,0 +1,24 @@
+<view>
+
+   <!--头部滑动导航栏tap-->
+   <scroll-view scroll-x
+                class="scroll-box"
+   >
+     <view wx:for="{{items}}" wx:key="index" class="box" >
+       <view class="{{currentTabIndex == index? 'selected':'noselected' }}"
+             bindtap="currrenttap"
+             data-idx="{{index}}"
+       >
+         {{item.name}}
+       </view>
+     </view>
+   </scroll-view>
+
+   <!--主页内容-->
+   <view>
+     <swiper>
+       <swiper-item>
+       </swiper-item>
+     </swiper>
+   </view>
+</view>
