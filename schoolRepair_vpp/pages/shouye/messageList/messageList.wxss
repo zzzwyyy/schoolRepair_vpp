@@ -1,18 +1,51 @@
+/*tap导航栏的样式*/
 .scroll-box {
   white-space: nowrap;
-  background-color:#999999;
 }
-
 .box {
   display:inline-block;
-  padding:20rpx;
-  border:1rpx solid #cccccc;
+  margin: 10rpx 30rpx;
+  font-size: 15px;
 }
-
+/*tap导航栏选中时的样式*/
 .selected {
-  color:red;
+  color:blue;
+  padding:10rpx;
+  border-bottom:2px solid blue;
 }
-
+/*tap导航栏未选中时的样式*/
 .noselected {
   color:black;
+}
+/*主页内容样式*/
+.content_box {
+  background-color:antiquewhite; 
+  height:100%; 
+  margin:10rpx;
+}
+/*筛选和picker组件的样式*/
+.selector_box {
+  display: flex;
+  flex-direction: row-reverse;
+  padding:20rpx;
+  font-size:15px;
+  font-family: 宋体;
+  font-weight: bold;
+}
+/*picker组件的样式*/
+.selector {
+   border:0.7px solid blue;
+   width:70px;
+   margin:0 15rpx;
+   border-radius:5px;
+   text-align:center;
+}
+/*每一个消息的样式*/
+.message_box {
+  border:1.5rpx solid black;
+  border-radius:10rpx;
+  margin:25rpx;
+  padding:10rpx;
+  font-size: 15px;
+  background:rgba(255,255,255,0.5);
 }

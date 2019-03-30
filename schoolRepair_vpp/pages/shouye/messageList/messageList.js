@@ -12,7 +12,16 @@ Page({
       { "name": "长思四号", "id": "four" },
       { "name": "长思五号", "id": "five" },
     ],
-    currentTabIndex:0
+    currentTabIndex:0,
+    floor:[
+      "全部",
+      "一楼",
+      "二楼",
+      "三楼",
+      "四楼",
+      "五楼"
+    ],
+    index:0,
   },
 
   /**
@@ -78,5 +87,11 @@ Page({
     this.setData({
       currentTabIndex: e.currentTarget.dataset.idx
     })
+  },
+  floorChange:function(e) {
+    this.setData({
+      index:e.detail.value,
+    })
+    console.log(e.detail.value)
   }
 })

@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/shouye/messageList/messageList",
+   "pages/shouye/messageList/messageList",
     "pages/shouye/shouye",
     "pages/messages/message",
-    "pages/mine/mine",
     "pages/validate/validate",
+    "pages/mine/mine",
     "pages/welcome/welcome" 
   ],
 

@@ -1,5 +1,4 @@
 <view>
-
    <!--头部滑动导航栏tap-->
    <scroll-view scroll-x
                 class="scroll-box"
@@ -14,11 +13,129 @@
      </view>
    </scroll-view>
 
-   <!--主页内容-->
-   <view>
-     <swiper>
-       <swiper-item>
-       </swiper-item>
-     </swiper>
+   <view class="content_box">
+     <!--选项框内容-->
+      <view class="selector_box">
+        <picker mode="selector"
+               range="{{floor}}"
+               vaule="{{index}}"
+               bindchange="floorChange"
+               class="selector"
+        >
+           {{floor[index]}}
+        </picker>
+        <text>筛选:</text>
+      </view>
+     <!--消息内容-->
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
+     <view class="message_box">
+       <view>
+         <view>宿舍号：530</view>
+         <view>
+            <text>保修内容：</text>
+            <view>厕所灯坏了</view>
+         </view>
+         <view>保修时间：2019.3.12</view>
+       </view>
+     </view>
    </view>
 </view>
