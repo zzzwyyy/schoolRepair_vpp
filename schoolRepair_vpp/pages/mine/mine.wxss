@@ -1,0 +1,19 @@
+/*总体样式*/
+.box {
+  background-color:antiquewhite; 
+  margin:30rpx 10rpx;
+  border:1px solid gainsboro;
+  padding:20rpx;
+  height:1000rpx;
+}
+/*每一栏信息的样式*/
+.content_box {
+  border:1rpx solid black;
+  border-radius:5rpx;
+  margin-top:10rpx;
+  display:flex;
+  justify-content:space-between;
+  padding:15rpx;
+  height:70rpx;
+}
+

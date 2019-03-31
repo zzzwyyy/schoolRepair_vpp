@@ -1,0 +1,68 @@
+<!--显示页面的内容-->
+<view class="box" id='oldData_box' style="display:{{oldData}}">
+<form>
+  <view class="content_box name">
+    <view>用户名 :</view>
+    <text>王蓥蓥</text>
+  </view>
+  <view class="content_box sex">
+    <view>性别 :</view>
+    <text>女</text>
+  </view>
+  <view class="content_box id">
+    <view>工号 :</view>
+    <text>05178212</text>
+  </view>
+  <view class="content_box teleNum">
+    <view>手机号 :</view>
+    <text>18659021121</text>
+  </view>
+  <view class="content_box range">
+    <view>管理范围 :</view>
+    <text>宿舍 图书馆</text>
+  </view>
+  <view class="content_box suggestion">
+    <view>意见信箱 :</view>
+    <text>610193653@qq.com</text>
+  </view>
+  <button style='margin-top:50rpx;' type="primary" bindtap="dataChange">更改信息</button>
+</form>
+</view>
+
+<!--隐藏页面的内容-->
+<view class="box" id='upData_box' style="display:{{upData}}">
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="content_box name">
+    <view>用户名 :</view>
+    <input placeholder='请输入用户名' name='userName'></input>
+  </view>
+  <view class="content_box sex">
+    <view>性别 :</view>
+    <input placeholder='请输入性别' name="userSex"></input>
+  </view>
+  <view class="content_box id">
+    <view>工号 :</view>
+   <input placeholder='请输入工号' name='userId'></input>
+  </view>
+  <view class="content_box teleNum">
+    <view>手机号 :</view>
+    <input placeholder='请输入手机号' name='userNumber'></input>
+  </view>
+  <view class="content_box range" style="height:120rpx">
+    <view>管理范围 :</view>
+    <checkbox-group name="checkInfo">
+      <label  wx:for="{{items}}">
+        <checkbox value="{{item}}">{{item}}</checkbox>
+      </label>
+    </checkbox-group>
+  </view>
+  <view class="content_box suggestion">
+    <view>意见信箱 :</view>
+    <text>610193653@qq.com</text>
+  </view>
+  <view style='margin-top:50rpx'>
+    <button type="warn" bindtap="cancel">取消</button>
+    <button style='margin-top:20rpx' type="primary" formType="submit">保存        </button>
+  </view>
+</form>
+</view>

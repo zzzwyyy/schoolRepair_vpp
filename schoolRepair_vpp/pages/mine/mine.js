@@ -4,7 +4,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    upData: "none",
+    items:[
+      "宿舍",
+      "图书馆",
+      "体育馆",
+      "教室",
+      "游泳馆",
+      "其他"
+    ],
+    upDataInfo:{
+    }
   },
 
   /**
@@ -61,5 +71,40 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  /*更改信息按钮控制隐藏页面*/
+  dataChange:function(e) {
+    this.setData({
+      upData:'',
+      oldData:'none'
+    }) 
+  },
+  /*隐藏页面的取消按钮*/
+  cancel:function(e) {
+    this.setData({
+      upData: 'none',
+      oldData: ''
+    }) 
+  },
+  /*更改信息的保存按钮*/
+  conserve:function(e) {
+    this.setData({
+      upData: 'none',
+      oldData: ''
+    }) 
+  },
+  formSubmit:function(e) {
+    console.log(e)
+    let { userName, userSex, userId, userNumber, checkInfo } = e.detail.value;
+    this.setData({
+      upDataInfo:{
+        userName,
+          userSex,
+        userId,
+          userNumber,
+        checkInfo
+      }
+    })
+    console.log(this.data.upDataInfo)
   }
 })

@@ -5,13 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    items:[
-      '宿舍',
-      '教学楼',
-      '图书馆',
-      '体育馆'
-    ],
-    currentTabIndex:0,
   },
 
   /**
@@ -69,14 +62,4 @@ Page({
   onShareAppMessage: function () {
     
   },
-  /*点击管理地点的选项卡事件*/
-  currentTap:function(e) {
-    console.log(e)
-     if(this.data.currentTabIndex == e.currentTarget.dataset.idx) {
-       return;
-     }
-     this.setData({
-       currentTabIndex:e.currentTarget.dataset.idx
-     })
-  }
 })

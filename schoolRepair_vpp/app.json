@@ -1,10 +1,11 @@
 {
   "pages": [
-   "pages/shouye/messageList/messageList",
-    "pages/shouye/shouye",
     "pages/messages/message",
-    "pages/validate/validate",
     "pages/mine/mine",
+    "pages/shouye/shouye",
+    "pages/shouye/messageList/messageList",
+    
+    "pages/validate/validate",
     "pages/welcome/welcome" 
   ],
 
@@ -16,7 +17,7 @@
     "backgroundColor": "#ffffff",
     "color":"#999999",
     "borderStyle":"#666666",
-    "selectedColor":"#66ccff",
+    "selectedColor":"blue",
     "list":[
       {
         "pagePath":"pages/shouye/shouye",
