@@ -15,11 +15,11 @@ Page({
     currentTabIndex:0,
     floor:[
       "全部",
-      "一楼",
-      "二楼",
-      "三楼",
-      "四楼",
-      "五楼"
+      "灯",
+      "桌子",
+      "椅子",
+      "水管",
+      "其他"
     ],
     index:0,
   },
@@ -93,5 +93,19 @@ Page({
       index:e.detail.value,
     })
     console.log(e.detail.value)
+  },
+  showModel:function() {
+    wx:wx.showModal({
+      title: '提示',
+      content: '是否确定修理完成？',
+      showCancel: true,
+      success: function(res) {
+        if(res.confirm){
+          console.log("确认删除")
+        }else if(res.cancel) {
+          console.log("取消删除")
+        }
+      },
+    })
   }
 })

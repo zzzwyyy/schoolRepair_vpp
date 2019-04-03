@@ -1,8 +1,6 @@
 <view>
    <!--头部滑动导航栏tap-->
-   <scroll-view scroll-x
-                class="scroll-box"
-   >
+   <scroll-view scroll-x class="scroll-box">
      <view wx:for="{{items}}" wx:key="index" class="box" >
        <view class="{{currentTabIndex == index? 'selected':'noselected' }}"
              bindtap="currrenttap"
@@ -18,7 +16,7 @@
       <view class="selector_box">
         <picker mode="selector"
                range="{{floor}}"
-               vaule="{{index}}"
+               value="{{index}}"
                bindchange="floorChange"
                class="selector"
         >
@@ -28,18 +26,22 @@
       </view>
      <!--消息内容-->
      <view class="message_box">
+      
        <view>
         <view style="display:flex;flex-direction:row;justify-content:space-between">
           <view>宿舍号：530</view>
-          <view style='border:1px solid #999999;border-radius:7rpx;padding:7rpx'>修理完成</view>
+          <view style='border:1px solid #999999;border-radius:7rpx;padding:7rpx' bindtap="showModel">修理完成</view>
         </view>
+
          <view>
             <view>保修内容：</view>
             <view style='border:0.8rpx solid #999999; text-indent:2em;width:550rpx;margin:1em;padding:7rpx;'>
                 <text>厕所灯坏了</text>
             </view>
          </view>
+
          <view>保修时间：2019.3.12</view>
+
        </view>
      </view>
    </view>

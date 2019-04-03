@@ -6,7 +6,6 @@ Page({
       { name: "宿舍", value: "宿舍" },
       { name: "教室", value: "教室" },
       { name: "体育馆", value: "体育馆" },
-      { name: "图书馆", value: "图书馆" },
       { name: "游泳馆", value: "游泳馆" },
       { name: "其他", value: "其他"}
     ],
@@ -28,7 +27,7 @@ Page({
     }
     else{
       this.setData({
-        managerInfo:
+        managerInfo:{}
       })
     }
   }
