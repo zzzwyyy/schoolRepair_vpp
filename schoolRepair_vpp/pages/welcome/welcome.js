@@ -1,7 +1,7 @@
 Page({
   onTap:function() {
-   /* wx.redirectTo({
+    wx.redirectTo({
       url:"../validate/validate"
-    });*/
+    });
   }
 })

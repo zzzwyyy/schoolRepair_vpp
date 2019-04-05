@@ -1,3 +1,4 @@
+/*总体样式*/
 .user-box {
   display: flex;
   flex-direction: column;
@@ -8,18 +9,18 @@
   align-items:center;
   margin:100rpx 5% 0 5%;
 }
-
+/*验证码*/
 .user-content {
   margin-top:30rpx;
 }
-
+/*输入框*/
 .user-input{
   border: 1px solid #ccc;
   width:500rpx;
   height:70rpx; 
   margin-top:40rpx;
 }
-
+/*按钮*/
 .user-botton {
    margin-top:30rpx;
    width:400rpx;

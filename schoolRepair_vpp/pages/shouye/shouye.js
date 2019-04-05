@@ -6,7 +6,7 @@ Page({
    */
   data: {
     index:0,
-    items:[
+    diqu:[
       "西安邮电大学-西区",
       "西安邮电大学-东区"
     ],
@@ -67,4 +67,9 @@ Page({
   onShareAppMessage: function () {
     
   },
+  diquChange:function(e) {
+    this.setData({
+      index : e.detail.value
+    })
+  }
 })

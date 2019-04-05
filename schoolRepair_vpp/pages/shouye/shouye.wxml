@@ -1,11 +1,26 @@
-<view>
+<view class="shouye_box">
    <!--首页轮播图-->
-  
+   <image></image>
    <!--大学地区选择-->
-   <picker mode='selector'
-           range="{{items}}"
+   <picker mode="selector"
+           range="{{diqu}}"
            value="{{index}}"
+           class="picker_box"
+           bindchange="diquChange"
    >
-       {{item[index]}}
+       {{diqu[index]}}
    </picker>
+   <!--维修地点选择-->
+   <view class="contain_box">
+      <view class="contain_box1">
+        <view class="didian_box">教学楼</view>
+        <view class="didian_box">图书馆</view>
+        <view class="didian_box">实验楼</view>
+      </view>
+      <view class="contain_box2"> 
+        <view class="didian_box">宿舍</view>
+        <view class="didian_box">其他</view>
+        <view class="didian_box"></view>
+      </view>
+    </view>
 </view>

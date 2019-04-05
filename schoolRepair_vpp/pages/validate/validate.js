@@ -15,20 +15,21 @@ Page({
    wx.request({
     url: "http://www.tiankongzhicheng.club/web/users.json",
     data:{
-      inputNum:''
+      inputNum:'111'
       },
     method:'POST',
     header:   {
       'content-type':'application/x-www-form-urlencoded'
       },
     success:function(res) {
-      console.log(res.data.code);
+     /*wx.redirectTo({
+        url:'../welcome/welcome'  
+     })*/
     },
     fail:function(res) {
-      console.log('submite fail');
-    },
-    complete:function(res) {
-      console.log('submite complete');
+      wx.redirectTo({
+        url: '../messages/message' 
+      })
     }
   })
  },
