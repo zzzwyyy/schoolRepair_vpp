@@ -1,6 +1,6 @@
-微信小程序上打算做一个性别下拉框。
+﻿微信小程序上打算做一个性别下拉框。
 
-wxml代码：
+wxml代码
   <view class="section">
     <text>性别：</text>
     <picker mode="selector"
