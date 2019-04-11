@@ -13,10 +13,8 @@ Page({
   } ,
   handleButton:function() {
    wx.request({
-    url: "http://www.tiankongzhicheng.club/web/users.json",
-    data:{
-      inputNum:'111'
-      },
+    url: "",
+    data:{},
     method:'POST',
     header:   {
       'content-type':'application/x-www-form-urlencoded'
