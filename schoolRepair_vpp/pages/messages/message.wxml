@@ -1,6 +1,5 @@
 <form bindsubmit="formSubmit" >
-
-
+  <!--用户名-->
   <view class="section" >
     <text >用户名：</text>
     <input type="text"
