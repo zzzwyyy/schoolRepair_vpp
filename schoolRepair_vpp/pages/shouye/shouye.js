@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    items:[],
     index:0,
     diqu:[
       "西安邮电大学-西区",
@@ -16,7 +17,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+   /* wx.request({
+      url: '',
+      method:'GET',
+      data:{}
+    })*/
   },
 
   /**
@@ -71,5 +76,8 @@ Page({
     this.setData({
       index : e.detail.value
     })
+  },
+  Clickscholl:function() {
+
   }
 })

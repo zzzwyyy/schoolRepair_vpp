@@ -18,7 +18,7 @@
   border-radius:5rpx;
   padding:15rpx;
   margin-top:10rpx;
-  height:350rpx;
+
 }
 /*地点个体样式*/
 .contain_box1 {
@@ -30,5 +30,9 @@
 .didian_box {
   margin:20rpx;
   flex:1;
-  border: 1rpx solid gainsboro;
+}
+/*图片样式*/
+image {
+   height: 100rpx;
+   width:100rpx;
 }

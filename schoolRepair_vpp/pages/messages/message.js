@@ -2,7 +2,7 @@ App = getApp();
 Page({
   data: {
     items:[
-      "tuushu"
+      "tushu"
     ],
     managerInfo:{}
   },
@@ -46,12 +46,15 @@ Page({
     }
   },
   onload: function () {
-   /* wx.request({
-      url:'',
+     wx.request({
+      url:'https://www.pluto.wiki',
       method: 'GET',
       success:function(res) {
-       console.log('获取成功')
+       console.log('获取管理范围成功')
+      },
+      fail:function(res){
+        console.log("获取管理范围失败")
       }
-    })*/
+    })
   }
 })

@@ -1,0 +1,14 @@
+/*头像样式*/
+.pic {
+   height: 300rpx;
+   width: 300rpx;
+}
+.info {
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   margin:100rpx 0;
+}
+button {
+  width: 60%;
+}

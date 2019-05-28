@@ -1,31 +1,31 @@
 {
   "pages": [
-    "pages/validate/validate",
+    "pages/index/index",
     "pages/shouye/shouye",
+    "pages/mine/mine",
     "pages/shouye/messageList/messageList",
+    "pages/validate/validate",
     "pages/welcome/welcome",
-    "pages/messages/message",
-    "pages/mine/mine"
+    "pages/messages/message"
   ],
-
   "window": {
     "navigationBarTitleText": "校园修一修"
   },
-
   "tabBar": {
     "backgroundColor": "white",
-    "color":"#999999",
-    "borderStyle":"#666666",
-    "selectedColor":"blue",
-    "list":[
+    "color": "#999999",
+    "borderStyle": "black",
+    "selectedColor": "blue",
+    "list": [
       {
-        "pagePath":"pages/shouye/shouye",
-        "text":"消息中心"
+        "pagePath": "pages/shouye/shouye",
+        "text": "消息中心"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "个人主页"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
