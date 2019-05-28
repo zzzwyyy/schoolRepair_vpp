@@ -1,9 +1,15 @@
 <view class="shouye_box">
    <!--首页轮播图-->
    <swiper>
-     <view wx-for='items'>
-       <swiper-item>{{item.swiper_image}}</swiper-item>
-     </view>
+       <swiper-item>
+          <image src="../../images/index2.jpg"></image>
+       </swiper-item>
+       <swiper-item>
+          <image src="../../images/index3.jpg"></image>
+       </swiper-item>
+        <swiper-item>
+          <image src="../../images/index4.jpg"></image>
+       </swiper-item>
    </swiper>
    <!--大学地区选择-->
    <picker mode="selector"
@@ -20,25 +26,25 @@
    </view>
    <view class="contain_box">
       <view class="contain_box1">
-       <view class="didian_box" bindtap='Clickschool'>
+       <view class="didian_box" bindtap='clickSwitch'>
           <image src='../../images/school.png'></image>
           <view>教学楼</view>
        </view>
-       <view class="didian_box">
+       <view class="didian_box"  bindtap='clickSwitch'>
           <image src='../../images/library.png'></image> 
           <view>图书馆</view>
        </view> 
-       <view class="didian_box">
+       <view class="didian_box" bindtap='clickSwitch'>
           <image src='../../images/liboratory.png'></image>
           <view>实验楼</view>
        </view>
       </view>
       <view class="contain_box2"> 
-        <view class="didian_box">
+        <view class="didian_box" bindtap='clickSwitch'>
             <image src='../../images/apartment.png'></image>
             <view>宿舍</view>
         </view>  
-        <view class="didian_box">
+        <view class="didian_box" bindtap='clickSwitch'>
             <image src='../../images/more.png'></image>
             <view>其他</view>
         </view> 

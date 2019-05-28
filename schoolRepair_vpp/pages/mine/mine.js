@@ -105,6 +105,9 @@ Page({
         checkInfo
       }
     })
-    console.log(this.data.upDataInfo)
+    console.log(this.data.upDataInfo);
+    wx.switchTab({
+      url: '../mine/mine'
+    });
   }
 })

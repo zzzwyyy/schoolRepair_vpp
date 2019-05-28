@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    items:[],
+    
     index:0,
     diqu:[
       "西安邮电大学-西区",
@@ -77,7 +77,10 @@ Page({
       index : e.detail.value
     })
   },
-  Clickscholl:function() {
-
+  clickSwitch:function() {
+    console.log('用户点击了维修范围，现在跳转到维修消息页面')
+    wx.navigateTo({
+      url: '../shouye/messageList/messageList'
+    })
   }
 })

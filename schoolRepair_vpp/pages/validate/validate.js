@@ -13,20 +13,23 @@ Page({
   } ,
   handleButton:function() {
    wx.request({
-    url: "",
+     url: "http://www.pluto.wiki",
     data:{},
     method:'POST',
     header:   {
       'content-type':'application/x-www-form-urlencoded'
       },
     success:function(res) {
-     /*wx.redirectTo({
-        url:'../welcome/welcome'  
-     })*/
+      console.log("验证码向后发送成功")
+     wx.redirectTo({
+        url:'../messages/message'  
+     })
     },
     fail:function(res) {
-      wx.redirectTo({
-        url: '../messages/message' 
+      console.log("验证码向后发送失败")
+      wx.showModal({
+        title: '提示',
+        content: '请重新输入',
       })
     }
   })

@@ -46,7 +46,7 @@ Page({
               })
             },
             fail:function(res) {
-
+              console.log('获取Openid失败')
             }
           })
         } 

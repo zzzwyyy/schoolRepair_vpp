@@ -1,6 +1,6 @@
 var app = getApp();
 Page({
-
+   
   /**
    * 页面的初始数据
    */
@@ -22,13 +22,24 @@ Page({
       "其他"
     ],
     index:0,
+    hide:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    /*wx.request({
+      url: 'http://www.pluto.wiki/api/server/get/allMainTenance',
+      data:data,
+      mothed:"GET",
+      success:function(res) {
+        console.log("获取维修信息成功")
+      },
+      fail:function(res) {
+        console.log("获取维修信息失败")
+      }
+    })*/
   },
 
   /**
@@ -95,13 +106,17 @@ Page({
     console.log(e.detail.value)
   },
   showModel:function() {
-    wx:wx.showModal({
+    var that = this;
+    wx.showModal({
       title: '提示',
       content: '是否确定修理完成？',
       showCancel: true,
       success: function(res) {
         if(res.confirm){
           console.log("确认删除")
+          that.setData({
+            hide: 'none',
+          })
         }else if(res.cancel) {
           console.log("取消删除")
         }

@@ -2,7 +2,11 @@ App = getApp();
 Page({
   data: {
     items:[
-      "tushu"
+      "图书馆",
+      "教学楼A楼",
+      "教学楼B楼",
+      "实验室",
+      "宿舍"
     ],
     managerInfo:{}
   },
@@ -27,27 +31,31 @@ Page({
           managerPhone,
           managerRange
         }
+      }),
+      console.log(that.data.managerInfo)
+      wx.switchTab({
+        url: '../shouye/shouye',
       })
-      wx.request({
-        url:'',
+     /* wx.request({
+        url:'http://www.pluto.wiki',
         data: JSON.stringify(that.data.managerInfo) ,
         method:'POST',
         success:function(res) {
-          /*wx.navigateTo({
-            url: '../shouye/shouye',
-          })*/
-        },
-        fail:function(res){
           wx.navigateTo({
             url: '../shouye/shouye',
           })
+        },
+        fail:function(res){
+           wx.navigateTo({
+            url: '../shouye/shouye',
+          })
         }
-      })
+      })*/
     }
   },
   onload: function () {
-     wx.request({
-      url:'https://www.pluto.wiki',
+    /* wx.request({
+      url:'http://www.pluto.wiki',
       method: 'GET',
       success:function(res) {
        console.log('获取管理范围成功')
@@ -55,6 +63,6 @@ Page({
       fail:function(res){
         console.log("获取管理范围失败")
       }
-    })
+    })*/
   }
 })
